@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>SampleApp</id>
+    <version>1.0.7114.20276</version>
+    <authors>VssAdministrator</authors>
+    <owners>VssAdministrator</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <licenseUrl>http://example.com/</licenseUrl>
+    <projectUrl>http://example.com/</projectUrl>
+    <description>The SampleApp deployment package, built on 6/24/2019</description>
+    <releaseNotes></releaseNotes>
+    <tags>OctopusDeploy</tags>
+  </metadata>
+</package>

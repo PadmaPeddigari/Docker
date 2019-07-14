@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<sitemanifest>
+  <IisApp path="C:\Users\pedpriya\Documents\Docker\Compose\venus\Venus\Code\PublishedCode" />
+  <setAcl path="C:\Users\pedpriya\Documents\Docker\Compose\venus\Venus\Code\PublishedCode" setAclResourceType="Directory" />
+  <setAcl path="C:\Users\pedpriya\Documents\Docker\Compose\venus\Venus\Code\PublishedCode" setAclUser="anonymousAuthenticationUser" setAclResourceType="Directory" />
+</sitemanifest>

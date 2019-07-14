@@ -1,0 +1,20 @@
+FROM microsoft/iis
+
+SHELL [ "powershell.exe" ]
+RUN Install-WindowsFeature NET-Framework-45-ASPNET ; \
+    Install-WindowsFeature Web-Asp-Net45
+
+COPY .\\Venus\\Code\\PublishedCode venus 
+
+RUN Remove-WebSite -Name 'Default Web Site'
+RUN New-Website -Name 'guidgenerator' -Port 80 -PhysicalPath 'c:\venus' -ApplicationPool '.NET v4.5'
+
+
+EXPOSE 81
+
+# RUN powershell.exe -Command New-Website -Name "venuswebapp" -Port 8084 -PhysicalPath "\\inetpub\\webroot" -ApplicationPool '.NET v4.5'
+
+CMD ["ping", "-t", "localhost"]
+
+#CMD Write-Host IIS Started… ; \  
+ #   while ($true) { Start-Sleep -Seconds 3600 }

@@ -1,0 +1,19 @@
+# The `FROM` instruction specifies the base image. You are
+# extending the `microsoft/aspnet` image.
+
+FROM microsoft/iis
+
+#SHELL [ "powershell.exe" ]
+RUN powershell.exe -command add-WindowsFeature NET-Framework-45-ASPNET
+RUN powershell.exe -Command Add-WindowsFeature Web-Asp-Net45
+
+COPY ./output c:/web-app
+
+EXPOSE 8081
+
+RUN powershell.exe -Command New-Website -Name "my-app" -Port 8081 -PhysicalPath "c:/web-app" -ApplicationPool '.NET v4.5'
+
+ENTRYPOINT powershell
+
+CMD Write-Host IIS Started… ; \  
+    while ($true) { Start-Sleep -Seconds 3600 }
